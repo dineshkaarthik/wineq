@@ -17,15 +17,13 @@ def get_data(config_path):
     data_path = config["data_source"]["s3_source"]
     df = pd.read_csv(data_path,sep=",")
     return df
-
-
-
+# "Check comments"
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
     args.add_argument("--config",default="params.yaml")
     parsed_args = args.parse_args()
-    get_data(config_path=parsed_args.config)
+    data = get_data(config_path=parsed_args.config)
 
 
 
