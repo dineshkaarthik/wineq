@@ -1,9 +1,13 @@
+# local package install
+-e .
+
+# third party packages
 dvc
 dvc[gdrive]
 sklearn
+pandas
 pytest
 tox
-pandas
 flake8
 flask
 gunicorn
