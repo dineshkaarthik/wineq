@@ -26,8 +26,8 @@ def index():
                 return jsonify(response)
         except Exception as e:
             print(e)
-            #error = {"error":"Something gone wrong! Try again later"}
-            return render_template("404.html",error=e)
+            error = {"error":e}
+            return render_template("404.html",error=error)
     else:
         return render_template("index.html")
 
